@@ -58,6 +58,50 @@ export const prepareInstructions = ({ jobTitle, jobDescription }: { jobTitle: st
       Return the analysis as an JSON object, without any other text and without the backticks.
       Do not include any other text or comments.`;
 
+
+export interface Feedback {
+  overallScore: number;
+  ATS: {
+    score: number;
+    tips: {
+      type: "good" | "improve";
+      tip: string;
+    }[];
+  };
+  toneAndStyle: {
+    score: number;
+    tips: {
+      type: "good" | "improve";
+      tip: string;
+      explanation: string;
+    }[];
+  };
+  content: {
+    score: number;
+    tips: {
+      type: "good" | "improve";
+      tip: string;
+      explanation: string;
+    }[];
+  };
+  structure: {
+    score: number;
+    tips: {
+      type: "good" | "improve";
+      tip: string;
+      explanation: string;
+    }[];
+  };
+  skills: {
+    score: number;
+    tips: {
+      type: "good" | "improve";
+      tip: string;
+      explanation: string;
+    }[];
+  };
+}
+
 export interface PuterUser {
   username: string;
   [key: string]: any;
