@@ -43,8 +43,8 @@ export const AIResponseFormat = `
       };
     }`;
 
-export const prepareInstructions = ({jobTitle, jobDescription}: { jobTitle: string; jobDescription: string; }) =>
-    `You are an expert in ATS (Applicant Tracking System) and resume analysis.
+export const prepareInstructions = ({ jobTitle, jobDescription }: { jobTitle: string; jobDescription: string; }) =>
+  `You are an expert in ATS (Applicant Tracking System) and resume analysis.
       Please analyze and rate this resume and suggest how to improve it.
       The rating can be low if the resume is bad.
       Be thorough and detailed. Don't be afraid to point out any mistakes or areas for improvement.
@@ -57,3 +57,69 @@ export const prepareInstructions = ({jobTitle, jobDescription}: { jobTitle: stri
       ${AIResponseFormat}
       Return the analysis as an JSON object, without any other text and without the backticks.
       Do not include any other text or comments.`;
+
+export interface PuterUser {
+  username: string;
+  [key: string]: any;
+}
+export interface FSItem {
+  path: string;
+  [key: string]: any;
+}
+export interface PuterChatOptions {
+  model?: string;
+  stream?: boolean;
+  [key: string]: any;
+}
+export interface ChatMessage {
+  role: string;
+  content: string | any[];
+}
+export interface AIResponse {
+  message: {
+    content: string | any[];
+  };
+  [key: string]: any;
+}
+
+declare global {
+  interface Window {
+    puter: {
+      auth: {
+        getUser: () => Promise<PuterUser>;
+        isSignedIn: () => Promise<boolean>;
+        signIn: () => Promise<void>;
+        signOut: () => Promise<void>;
+      };
+      fs: {
+        write: (
+          path: string,
+          data: string | File | Blob
+        ) => Promise<File | undefined>;
+        read: (path: string) => Promise<Blob>;
+        upload: (file: File[] | Blob[]) => Promise<FSItem>;
+        delete: (path: string) => Promise<void>;
+        readdir: (path: string) => Promise<FSItem[] | undefined>;
+      };
+      ai: {
+        chat: (
+          prompt: string | ChatMessage[],
+          imageURL?: string | PuterChatOptions,
+          testMode?: boolean,
+          options?: PuterChatOptions
+        ) => Promise<AIResponse>;
+        img2txt: (
+          image: string | File | Blob,
+          testMode?: boolean
+        ) => Promise<string>;
+      };
+      kv: {
+        get: (key: string) => Promise<string | null>;
+        set: (key: string, value: string) => Promise<boolean>;
+        delete: (key: string) => Promise<boolean>;
+        list: (pattern: string, returnValues?: boolean) => Promise<string[]>;
+        flush: () => Promise<boolean>;
+      };
+    };
+  }
+}
