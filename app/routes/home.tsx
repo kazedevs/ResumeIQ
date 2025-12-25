@@ -1,7 +1,9 @@
 import type { Route } from "./+types/home";
 import Navbar from "../components/Navbar";
+import HomeHero from "../components/HomeHero";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import ResumeList from "~/components/ResumeList";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -44,15 +46,8 @@ export default function Home() {
   return (
     <main className="bg-gradient-to-br from-slate-50 to-slate-100">
       <Navbar />
-      <section className="main-section">
-        <div className="page-heading py-16">
-          <h1>ResumeIQ - The AI resume Analyzer</h1>
-          <p>
-            ResumeIQ is an AI-powered resume analyzer that helps you optimize
-            your resume and increase your chances of getting hired.
-          </p>
-        </div>
-      </section>
+      <HomeHero />
+      <ResumeList />
     </main>
   );
 }

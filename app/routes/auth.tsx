@@ -59,6 +59,7 @@ const Auth = () => {
             await window.puter.auth.signIn();
             const puterUser = await window.puter.auth.getUser();
             setUser(puterUser);
+            navigate(next);
         } catch (error) {
             console.error("Sign in failed:", error);
         } finally {

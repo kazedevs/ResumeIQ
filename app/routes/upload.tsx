@@ -72,6 +72,7 @@ const Upload = () => {
             jobTitle,
             jobDescription,
             feedback: "",
+            createdAt: Date.now(),
         }
         await window.puter.kv.set(`resume:${uuid}`, JSON.stringify(data));
 
@@ -115,9 +116,13 @@ const Upload = () => {
                 <div className="page-heading py-16 text-center">
                     <h1 className="text-4xl font-bold mb-4">Smart feedback for your job</h1>
                     {isProcessing ? (
-                        <div className="flex flex-col items-center justify-center">
-                            <h2 className="text-xl mb-8">{statusText}</h2>
-                            <img src="/resume-scan.gif" className="w-full max-w-md rounded-lg shadow-lg" alt="Scanning..." />
+                        <div className="flex flex-col items-center justify-center min-h-[50vh] animate-in fade-in duration-700">
+                             <div className="w-20 h-20 mb-8 relative">
+                                <div className="absolute inset-0 border-4 border-blue-100 rounded-full"></div>
+                                <div className="absolute inset-0 border-4 border-blue-600 rounded-full border-t-transparent animate-spin"></div>
+                             </div>
+                            <h2 className="text-2xl font-bold text-slate-800 mb-2 tracking-tight">{statusText}</h2>
+                            <p className="text-slate-500 font-medium">This might take a few moments...</p>
                         </div>
                     ) : (
                         <>
