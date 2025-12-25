@@ -1,7 +1,6 @@
 # ResumeIQ 📄✨
 
 <div align="center">
-  <img src="./public/home_page.png" alt="ResumeIQ Demo" width="100%" />
   
   <br />
 
@@ -29,10 +28,10 @@
 
 |                                  Home Page                                   |                               Upload Interface                                |
 | :--------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
-| ![Home Page](https://placehold.co/600x400/1e1e1e/FFF?text=Home+Page+Preview) | ![Upload Page](https://placehold.co/600x400/1e1e1e/FFF?text=Upload+Interface) |
+| ![Home Page](./public/home_page.png) | ![Upload Page](./public/upload_page.png) |
 
 <div align="center">
-  <img src="https://placehold.co/800x400/1e1e1e/FFF?text=Analysis+Dashboard" alt="Dashboard" />
+  <img src="./public/dashboard.png" alt="Dashboard" />
   <p><i>Detailed analysis dashboard with actionable insights</i></p>
 </div>
 
