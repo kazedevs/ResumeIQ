@@ -1,87 +1,92 @@
-# Welcome to React Router!
+# ResumeIQ 📄✨
 
-A modern, production-ready template for building full-stack React applications using React Router.
+<div align="center">
+  <img src="./public/home_page.png" alt="ResumeIQ Demo" width="100%" />
+  
+  <br />
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+  <h3>AI-Powered Resume Analysis & Optimization</h3>
+  
+  <p>
+    Refine your resume with intelligent insights, real-time scoring, and actionable feedback. <br />
+    Built for modern job seekers.
+  </p>
+</div>
 
-## Features
+<br />
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 🚀 Features
 
-## Getting Started
+- **🤖 AI Analysis**: Get instant, detailed feedback on your resume's strengths and weaknesses.
+- **� Real-time Scoring**: See your Resume IQ score alongside visually rich metrics.
+- **🔒 Secure Upload**: Drag & drop your PDF resume for quick and secure processing.
+- **⚡️ Puter.js Integration**: Leverages Puter.js for seamless cloud capabilities and AI processing.
+- **🎨 Minimal & Responsive**: A beautiful, distraction-free UI designed for all devices.
+
+<br />
+
+## 📸 Screenshots
+
+|                                  Home Page                                   |                               Upload Interface                                |
+| :--------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
+| ![Home Page](https://placehold.co/600x400/1e1e1e/FFF?text=Home+Page+Preview) | ![Upload Page](https://placehold.co/600x400/1e1e1e/FFF?text=Upload+Interface) |
+
+<div align="center">
+  <img src="https://placehold.co/800x400/1e1e1e/FFF?text=Analysis+Dashboard" alt="Dashboard" />
+  <p><i>Detailed analysis dashboard with actionable insights</i></p>
+</div>
+
+<br />
+
+## 🛠️ Tech Stack
+
+- **Framework**: [React Router](https://reactrouter.com/) (v7)
+- **Styling**: [TailwindCSS](https://tailwindcss.com/)
+- **Backend/AI**: [Puter.js](https://puter.com/)
+- **Runtime**: Node.js
+
+<br />
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+- Node.js installed on your machine.
+- A Puter.js account (for AI features).
 
 ### Installation
 
-Install the dependencies:
+1.  Clone the repository:
 
-```bash
-npm install
-```
+    ```bash
+    git clone https://github.com/yourusername/ai-resume-analyzer.git
+    cd ai-resume-analyzer
+    ```
 
-### Development
+2.  Install dependencies:
 
-Start the development server with HMR:
+    ```bash
+    npm install
+    ```
 
-```bash
-npm run dev
-```
+3.  Start the development server:
 
-Your application will be available at `http://localhost:5173`.
+    ```bash
+    npm run dev
+    ```
 
-## Building for Production
+4.  Open `http://localhost:5173` in your browser.
 
-Create a production build:
+<br />
 
-```bash
-npm run build
-```
+## 🤝 Contributing
 
-## Deployment
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+<br />
 
 ---
 
-Built with ❤️ using React Router.
+<div align="center">
+  Built with ❤️ by ResumeIQ Team
+</div>
