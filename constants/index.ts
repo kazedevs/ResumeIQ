@@ -113,6 +113,7 @@ declare global {
           testMode?: boolean
         ) => Promise<string>;
       };
+      isLoading: boolean;
       kv: {
         get: (key: string) => Promise<string | null>;
         set: (key: string, value: string) => Promise<boolean>;

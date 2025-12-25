@@ -105,7 +105,7 @@ const Upload = () => {
         data.feedback = JSON.parse(feedbackText);
         await window.puter.kv.set(`resume:${uuid}`, JSON.stringify(data));
         setStatusText("Analysis complete, redirecting to result page...");
-        navigate(`/result/${uuid}`);
+        navigate(`/resume/${uuid}`);
     }
 
     return (
@@ -117,7 +117,7 @@ const Upload = () => {
                     {isProcessing ? (
                         <div className="flex flex-col items-center justify-center">
                             <h2 className="text-xl mb-8">{statusText}</h2>
-                            <img src="/public/resume-scan.gif" className="w-full max-w-md rounded-lg shadow-lg" alt="Scanning..." />
+                            <img src="/resume-scan.gif" className="w-full max-w-md rounded-lg shadow-lg" alt="Scanning..." />
                         </div>
                     ) : (
                         <>

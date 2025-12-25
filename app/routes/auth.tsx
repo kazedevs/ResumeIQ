@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
+import type { PuterUser } from "constants/index";
 
 export const meta = () => {
     return [
@@ -51,7 +52,7 @@ const Auth = () => {
         checkAuth();
     }, [navigate, next]);
 
-    const handleSignIn = async () => {  
+    const handleSignIn = async () => {
         if (!window.puter) return;
         setIsLoading(true);
         try {
