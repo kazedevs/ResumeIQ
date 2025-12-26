@@ -22,18 +22,6 @@
 - **⚡️ Puter.js Integration**: Leverages Puter.js for seamless cloud capabilities and AI processing.
 - **🎨 Minimal & Responsive**: A beautiful, distraction-free UI designed for all devices.
 
-<br />
-
-## 📸 Screenshots
-
-|                                  Home Page                                   |                               Upload Interface                                |
-| :--------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
-| ![Home Page](./public/home_page.png) | ![Upload Page](./public/upload_page.png) |
-
-<div align="center">
-  <img src="./public/dashboard.png" alt="Dashboard" />
-  <p><i>Detailed analysis dashboard with actionable insights</i></p>
-</div>
 
 <br />
 
