@@ -1,0 +1,8 @@
+# Exclude vendor/minified files from language statistics
+public/pdf.worker.min.mjs linguist-vendored
+*.min.js linguist-vendored
+*.min.mjs linguist-vendored
+
+# Mark TypeScript as the primary language
+*.ts linguist-detectable=true
+*.tsx linguist-detectable=true
